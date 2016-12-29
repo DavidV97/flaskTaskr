@@ -1,0 +1,19 @@
+{% extends "template.html" %}
+{% block content %}
+	<h2>Welcome to the Flask Nlog!</h2>
+	<h3>Please log in to access</h3>
+	
+	<form action="" method="POST">
+		<p>
+			<label for="username">username:</label>
+			<input type="text" id="username" name="username" value="{{request.form.username}}"> 
+		</p>
+		<p>
+			<label for="password">password:</label>
+			<input type="password" id="password" name="password" value="{{request.form.password}}"> 
+		</p>
+		<p>
+			<input type="submit" value="log in">
+		</p>
+	</form>
+{% endblock %}

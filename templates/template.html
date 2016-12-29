@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Taskr</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+	<div class="page">
+		{% for message in get_flashed_messages() %}
+			<div class="flash">{{ message }}</div>
+		{% endfor %}
+
+		{% if error %}
+			<p class="error">Error: {{ error }}</p>
+		{% endif %}
+
+		{% block content %}
+		{% endblock %}
+	</div>
+</body>
+</html>
